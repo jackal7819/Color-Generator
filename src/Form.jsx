@@ -1,9 +1,12 @@
 import { useState } from 'react';
 
-const Form = () => {
+const Form = ({addColor}) => {
     const [color, setColor] = useState('');
 
-    const handleSubmit = (event) => {};
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        addColor(color);
+    };
 
     return (
         <section className='container'>
